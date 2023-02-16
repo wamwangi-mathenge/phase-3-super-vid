@@ -1,5 +1,11 @@
 class User
 
+    attr_accessor :name
+
+    def initialize(name)
+        @name = name
+    end
+
     def log_in
         puts "User#log_in called"
         @logged_in = true
