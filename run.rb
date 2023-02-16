@@ -5,10 +5,10 @@ class User
     end
 end
 
-# class Student < User
+class Student < User
 
-#     def log_in
-#         super
-#         @in_class = true
-#     end
-# end
+    def log_in
+        super
+        @in_class = true
+    end
+end
