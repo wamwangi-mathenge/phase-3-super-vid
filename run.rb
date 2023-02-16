@@ -3,6 +3,7 @@ class User
     attr_accessor :name
 
     def initialize(name)
+        puts "User#initialize called"
         @name = name
     end
 
@@ -14,10 +15,11 @@ end
 
 class Student < User
 
-    attr_accessor :name, :grade
+    attr_accessor :grade
 
     def initialize(name, grade)
-        @name = name
+        puts "Student#initialize called"
+        super(name)
         @grade = grade
     end
 
@@ -28,5 +30,4 @@ class Student < User
     end
 end
 
-brian = Student.new
-brian.log_in
+brian = Student.new("Brian", 100)
