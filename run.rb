@@ -14,6 +14,13 @@ end
 
 class Student < User
 
+    attr_accessor :name, :grade
+
+    def initialize(name, grade)
+        @name = name
+        @grade = grade
+    end
+
     def log_in
         puts "Student#log_in called"
         super
